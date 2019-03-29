@@ -7,10 +7,13 @@
 
 	<link href="./css/style.css" rel="stylesheet">
 
+	 <script src="./sweetalert/sweetalert-dev.js"></script>
+  	<link rel="stylesheet" href="./sweetalert/sweetalert.css">
+
 </head>
 	<body>
 		<header>
-				Ontologia Relembrar
+				Ontologia Relembrar - Download Ontologia
 		</header>
 
 		<main>
@@ -52,7 +55,23 @@
 			
 			</div>
 
+			<div class="download-container">
+
+				Versão 1.1
+				<button>Download</button>
+			</div>
+
 		</main>
+
+<script>
+
+document.querySelector('.download-container button').onclick = function(){
+	swal("Oops...", "Exemplo de mensagem de erro!", "error");
+};
+
+</script>
+
+
 
 </body>
 </html>

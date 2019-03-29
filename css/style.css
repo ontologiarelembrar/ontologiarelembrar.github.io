@@ -35,10 +35,35 @@ header
 .right-container
 {
 	position: absolute;
-	top: 20%;
-	left: 34%;
+	top: 50%;
+	left: 50%;
 
-	width: 800px;
-	height: 800px;
-	background-color: gray;
+	width: 80px;
+	height: 80px;
+	
+}
+
+.download-container
+{
+	position: absolute;
+	top: 30%;
+	left: 40%;
+	width: 300px;
+	height: 200px;
+	background-color: rgb(235, 232, 232);
+	border-radius: 10px;
+	text-align: center;
+}
+
+.box-contat
+{
+	position: absolute;
+	top: 18%;
+	left: 40%;
+	width: 600px;
+	height: 400px;
+	background-color: rgb(235, 232, 232);
+	border-radius: 10px;
+	text-align: center;
+
 }
