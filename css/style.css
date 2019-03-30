@@ -1,69 +1,84 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700);
-
-
 body 
 {
   background-color: #f2f4f6;
-  font-family: 'Open Sans', sans-serif;
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-family:  GloriaHallelujah;
+  font-size: 20px;
+}
+
+a
+{
+	text-decoration: none;
 }
 
 header
 {
-	position: absolute;
+
+	position: fixed;
 	top: 0px;
 	left: 0px;
 	width: 100%;
-	height: 10%;
+	height: 14%;
 	background-color: rgb(235, 232, 232);
-	text-indent: 4%;
-	font-size: 30px;
+	
+	/*
+	text-indent: 10%;
+	font-size: 24px;
 	vertical-align: middle;
+	*/
+}
 
+.title-page
+{
+	position: absolute;
+	top: 25%;
+	left: 10%;
+	font-size: 26px;
 }
 
 .left-container
 {
 	position: fixed;
 	top: 20%;
-	left: 4%;
+	left: 10%;
 
-	width: 20%;
+	width: 30%;
 	height: 60%;
 }
 
 .right-container
 {
 	position: absolute;
-	top: 50%;
-	left: 50%;
+	top: 20%;
+	left: 36%;
 
-	width: 80px;
-	height: 80px;
-	
+	width: 60%;
+	height: 100%;
+
+	background-color: rgb(235, 232, 232);
 }
 
-.download-container
-{
-	position: absolute;
-	top: 30%;
-	left: 40%;
-	width: 300px;
-	height: 200px;
-	background-color: rgb(235, 232, 232);
-	border-radius: 10px;
-	text-align: center;
+
+@font-face 
+{ 
+	font-family: IndieFlower; 
+	src: url('../fonts/Indie_Flower/IndieFlower.ttf'); 
 }
 
-.box-contat
-{
-	position: absolute;
-	top: 18%;
-	left: 40%;
-	width: 600px;
-	height: 400px;
-	background-color: rgb(235, 232, 232);
-	border-radius: 10px;
-	text-align: center;
+@font-face 
+{ 
+	font-family: Bree_Serif; 
+	src: url('../fonts/Bree_Serif/BreeSerif-Regular.ttf'); 
+}
 
+@font-face 
+{ 
+	font-family: GloriaHallelujah; 
+	src: url('../fonts/Gloria_Hallelujah/GloriaHallelujah.ttf'); 
+}
+
+@font-face 
+{ 
+	font-family: PermanentMarker-Regular; 
+	src: url('../fonts/Permanent_Marker/PermanentMarker-Regular.ttf'); 
 }
