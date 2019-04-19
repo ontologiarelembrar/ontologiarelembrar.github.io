@@ -162,15 +162,10 @@ footer
     color: #f1f1f1;
 }
 
-/* DOCUMENTATION PAGE - LEFT MENU */
-
-#left-bar
+#code
 {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
+	padding: 2%;
 }
-
 
 /* MEDIA QUERIES*/
 
@@ -214,12 +209,52 @@ footer
     #description-ontology
 	{
 		flex-direction: row;
-		justify-content: space-around;
+		justify-content: center;
 	}
 
 	#description-ontology div
 	{
 		
+	}
+
+	/* DOCUMENTATION PAGE - LEFT MENU */
+
+	#documentation-container
+	{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		padding: 2%;
+	}
+
+	#documentation-bar
+	{
+		display: flex;
+	}
+
+	#documentation-bar nav
+	{
+		padding: 2%;
+		align-items: center;
+
+	}
+
+	#documentation-bar nav ul
+	{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	#documentation-text
+	{
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		background-color: #f1f1f1;
+		border-radius: 3px;
+		padding: 2%;
+		margin-left: 10px;
 	}
 }
 
