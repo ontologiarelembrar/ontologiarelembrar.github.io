@@ -1,11 +1,15 @@
 /*GENERAL*/
 
+*
+{
+	padding: 0px;
+}
+
 body 
 {
 
   font-family:  "Open Sans", Helveltica, Arial, sans-serif;
   color: #4d4d4d;
-
 }
 
 h1,h2,h3,h4,h5,h6
@@ -16,6 +20,17 @@ h1,h2,h3,h4,h5,h6
 
 }
 
+a
+{
+	text-decoration: none;
+}
+
+ul
+{
+	list-style: none;
+}
+
+/*INDEX PAGE*/
 /*HEADER*/
 
 nav
@@ -28,7 +43,7 @@ nav
 
 nav > a
 {
-	text-decoration: none;
+	/*text-decoration: none;*/
 	color: #f1f1f1;
 	font-family:  Bree_Serif, "Open Sans", Helveltica, Arial, sans-serif;
 	font-weight: 700;
@@ -37,7 +52,7 @@ nav > a
 
 nav ul
 {
-	list-style: none;
+	/*list-style: none;*/
 	padding: 0;
 	display: flex;
 	flex-direction: column;
@@ -59,11 +74,11 @@ nav ul li a
 	display: inline-block;
 	padding: 10px 0;
 	width: 100%;
-	text-decoration: none;
+	/*text-decoration: none;*/
 	color: #f1f1f1;
 }
 
-#image
+#image-background
 {
 	background-image: url("../img/forest-haze-hd-wallpaper-39811.jpg");
 	background-size: cover;
@@ -78,7 +93,7 @@ nav ul li a
 
 }
 
-#image p
+#image-background p
 {
 	margin: 2em;
 }
@@ -86,7 +101,7 @@ nav ul li a
 .button
 {
 	background-color: #004d1a;
-	text-decoration: none;
+	/*text-decoration: none;*/
 	padding: 10px 30px;
     font-size: .9em;
     border-radius: 3px;
@@ -103,7 +118,7 @@ nav ul li a
 	display: flex;
 	flex-direction: column;
 	align-items: justify;
-	padding: 2%;
+	padding: 1%;
 }
 
 #about-ontology div
@@ -118,15 +133,13 @@ nav ul li a
 
 #about-ontology p
 {
-	/*margin-bottom: 2.5em;*/
-	/*max-width: 1000px;*/
 	text-align: justify;
 }
 
 
 #description-ontology
 {
-    padding: 2%;
+    padding: 1%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,7 +159,7 @@ nav ul li a
 
 }
 
-img
+.icon-description-ontology
 { 
 	width: 100px;
 	height: 100px;
@@ -160,17 +173,63 @@ footer
     padding: 10px;
     background-color: #4d4d4d;
     color: #f1f1f1;
+    font-size: 12px;
 }
 
+footer a
+{
+	color: #f1f1f1;
+	font-weight: bold;
+	font-style: italic;
+}
+
+/*DOCUMENTATION PAGE*/
+
+#documentation-text
+{
+	padding: 2%;
+
+}
+
+#documentation-text p
+{
+	text-align: justify;
+}
+
+/*PREVIEW PAGE*/
 #code
 {
 	padding: 2%;
+}
+
+/* DOWNLOAD PAGE*/
+
+.download-box
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 1%;
+	align-items: center;
+}
+
+.download-box div
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #e6e6e6;
+	padding: 2%;
+	margin: 10px;
+    border-style: none;
+    border-radius: 3px;
 }
 
 /* MEDIA QUERIES*/
 
 @media screen and (min-width: 768px)
 {
+
 	nav
 	{
 		flex-direction: row;
@@ -183,7 +242,7 @@ footer
 		width: 70%;
 	}
 
-	#image
+	#image-background
 	{
 		height: 600px;
 		height: 60vh;
@@ -217,23 +276,26 @@ footer
 		
 	}
 
-	/* DOCUMENTATION PAGE - LEFT MENU */
+	/* DOCUMENTATION PAGE - BAR */
 
 	#documentation-container
 	{
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
-		padding: 2%;
+		padding: 1%;
 	}
 
 	#documentation-bar
 	{
 		display: flex;
+	
 	}
 
 	#documentation-bar nav
 	{
+		display: flex;
+		flex-direction: column;
 		padding: 2%;
 		align-items: center;
 
@@ -256,6 +318,12 @@ footer
 		padding: 2%;
 		margin-left: 10px;
 	}
+
+	#documentation-text p
+	{
+		text-align: justify;
+	}
+
 }
 
 @font-face 
