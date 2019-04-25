@@ -21,6 +21,24 @@ a
 	font-family:  Bree_Serif, "Open Sans", Helveltica, Arial, sans-serif;
 }
 
+span
+{
+	font-weight: bold;
+}
+/*
+
+active and disable underline in ancor if mouse on ancor
+a:link, a:visited 
+{
+	text-decoration: none
+}
+
+a:hover, a:active 
+{
+	text-decoration: underline
+}
+*/
+
 ul
 {
 	list-style: none;
@@ -186,12 +204,13 @@ footer a
 #documentation-text
 {
 	padding: 2%;
-
+	font-family:  Lato, Roboto, "Open Sans", Helveltica, Arial, sans-serif;
 }
 
 #documentation-text p
 {
 	text-align: justify;
+
 }
 
 /*PREVIEW PAGE*/
@@ -203,6 +222,14 @@ footer a
 
 /* DOWNLOAD PAGE*/
 
+.download
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 1%;
+	align-items: center;
+}
 .download-box
 {
 	display: flex;
@@ -447,5 +474,17 @@ footer a
 { 
 	font-family: Bree_Serif; 
 	src: url('../fonts/Bree_Serif/BreeSerif-Regular.ttf'); 
+}
+
+@font-face 
+{ 
+	font-family: Roboto; 
+	src: url('../fonts/Roboto/Roboto-Regular.ttf'); 
+}
+
+@font-face 
+{ 
+	font-family: Lato; 
+	src: url('../fonts/Lato/Lato-Regular.ttf'); 
 }
 
