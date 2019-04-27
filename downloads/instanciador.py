@@ -8,7 +8,7 @@ with open('populacao.csv') as csv_file:
   next(csv_reader)
   for row in csv_reader:
 
-    # criando instancia de pessoa
+    # criando instancia de Pessoa
     p1 = onto.Pessoa()
     p1.nome.append(row[0])
     p1.dataNascimento.append(row[1])
@@ -23,7 +23,7 @@ with open('populacao.csv') as csv_file:
     p1.imagem.append(row[10])
     p1.marcaCaracteristica.append(row[11])
 
-    # criando instancia de local
+    # criando instancia de Local
     l1 = onto.Local()
     l1.latitude.append(row[12])
     l1.longitude.append(row[13])
@@ -49,8 +49,12 @@ with open('populacao.csv') as csv_file:
 
     # criando relacoes
     d1.estaAssociado = [p1]
-    d1.possui = [l1]
+    d1.ocorreuEm = [l1]
+
+    l1.eUmPontoDe = [b1]
+    b1.eBairroDe = [c1]
+    c1.eCidadeDe = [uf]
 
 # arquivo de saida
-onto.save(file = "instanciasCsv.owl", format = "rdfxml")
+onto.save(file = "instancias.owl", format = "rdfxml")
       

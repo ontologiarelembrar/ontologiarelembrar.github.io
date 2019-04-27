@@ -225,6 +225,9 @@ footer a
 
 #code
 {
+	display: flex;
+	flex-direction: column;
+	font-size: 100%;
 	padding: 2%;
 }
 
