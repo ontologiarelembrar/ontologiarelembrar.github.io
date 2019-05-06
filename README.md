@@ -1,5 +1,5 @@
-# Repositório para o site projeto Ontologia Relembrar para pessoas desaparecidas
+# OntologiaRelembrar
 
-#### O site da ontologia Relembrar foi desenvolvido com auxílio das tecnologias html5, css3 e javascript, além disso também foram utilizadas algumas bibliotecas.
+Este repositório se destina ao projeto do site da ontologia Relembrar. O site foi desenvolvido com auxílio das tecnologias html5, css3 e Normalize CSS.
 
-#### A estrátegia de design foi a mobile first.
+A estrátegia adotada de design foi a Mobile First.
