@@ -194,6 +194,7 @@ footer a
 {
 	padding: 2%;
 	font-family:  Lato, Roboto, "Open Sans", Helveltica, Arial, sans-serif;
+
 }
 
 #documentation-text p
@@ -210,7 +211,7 @@ footer a
 .documentation-img img
 {
 	padding: 2%;
-	width: 100%;
+	width: 90%;
  	height: auto;
 }
 
@@ -232,7 +233,7 @@ footer a
 {
 	display: flex;
 	flex-direction: column;
-	font-size: 100%;
+	font-size: 70%;
 	padding: 2%;
 }
 
@@ -420,6 +421,16 @@ footer a
 	}
 
 	/* DEVELOPERS PAGE*/
+
+	/* PREVIEW PAGE*/
+
+	#code
+	{
+		display: flex;
+		flex-direction: column;
+		font-size: 100%;
+		padding: 2%;
+	}
 
 	/* DOWNLOADS PAGE */
 
