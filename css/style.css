@@ -207,6 +207,24 @@ footer a
 	list-style: circle;
 }
 
+.documentation-img img
+{
+	padding: 2%;
+	width: 100%;
+ 	height: auto;
+}
+
+.relations-img
+{
+	padding: 1%;
+	width: 50%;
+}
+
+.graph-img img
+{
+	padding: 1%;
+	width: 100%;
+}
 
 /*PREVIEW PAGE*/
 
@@ -392,6 +410,13 @@ footer a
 	#documentation-text p
 	{
 		text-align: justify;
+	}
+
+	.documentation-img img
+	{
+		padding: 2%;
+		width: 50%;
+	 	height: auto;
 	}
 
 	/* DEVELOPERS PAGE*/

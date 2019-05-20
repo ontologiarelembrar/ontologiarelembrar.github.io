@@ -55,7 +55,7 @@
 							<p><span>Conceitualizada por:</span> Mayara Marques e Thiago Frazão</p>
 							<p><span>Implementada por:</span> Mayara Marques e Thiago Frazão</p>
 							
-							<p><span>Propósito:</span> Estruturar os dados sobre pessoas desaparecidas e
+							<p><span>Propósito:</span> Estruturar as informações sobre pessoas desaparecidas e
 							    facilitar a publicação desses dados de maneira compatível com sistemas de
 							    agentes inteligentes.
 							</p>
@@ -159,9 +159,26 @@
 
 							<p><h2>Conceitualização</h2></p>
 
+							<p>As informações coletadas através da análise informal e formal de textos sobre o domínio permitiram a criação de glossários de termos e uma tabela de atributos de classe. Os glossários de termos incluem conceitos, propriedades e relacionamentos considerados relevantes no domínio para fazer parte da ontologia. A tabela de atributos de classe permite especificar quais termos são classes do domínio e os atributos que pertencem a cada classe. </p>
+
+
+							<div class="documentation-img">
+
+								<p><span>Glossários de termos<span></p>
+								<img src="./img/tabela_conceitualizacao_pessoa.png" alt="tabela-conceitualizacao-pessoa">
+								
+								<img src="./img/tabela_conceitualizacao_desaparecimento.png" alt="tabela_conceitualizacao_desaparecimento">
+								
+								<img src="./img/tabela_conceitualizacao_local.png" alt="tabela_conceitualizacao_local">
+
+								<p><span>Tabela de atributos de classe<span></p>
+
+								<div class="relations-img">
+									<img src="./img/tabela_conceitualizacao_relacoes.png" alt="tabela_conceitualizacao_relacoes">
+								</div>
+							</div>
 						</div>
 
-						
 						<div id="integracao">
 
 							<p><h2>Integração</h2></p>
@@ -218,13 +235,86 @@
 
 							<p><h2>Implementação</h2></p>
 
+							<p>A partir do modelo informal foi gerado o modelo formal para a ontologia. Para auxiliar o processo de construção da ontologia foi utilizada a ferramenta <a href="https://protege.stanford.edu">Protégé</a> de apoio ao desenvolvimento de ontologias em sua versão 5.2.0. Para auxiliar o processo de construção de ontologias foi utilizada a ferramenta Protégé de apoio ao desenvolvimento de ontologias. A linguagem da ontologia é a OWL2 e sua sintaxe RDF/XML.</p>
+
+
+							<div class="documentation-img">
+
+								<p><span>Criando classes</span></p>
+								<img src="./img/classes.png" alt="classes">
+								<p><span>Criando propriedades dos objetos</span></p>
+								<img src="./img/propriedadesObjetos.png" alt="propriedades-objetos">
+								<p><span>Criando propriedades dos dados</span></p>
+								<img src="./img/propriedadesDados.png" alt="propriedades-dados">
+							</div>
+
+							<div class="graph-img">
+								<p><span>Modelo visual da ontologia Relembrar</span></p>
+								<img src="./img/modeloVisual.png" alt="modelo-visual">
+							</div>
+
 						</div>
 
-						
 						<div id="avaliacao">
 
 							<p><h2>Avaliação</h2></p>
-		
+							<p>A avaliação da ontologia criada consistiu em dois processos, validação e verificação.</p>
+
+							
+							<p><span>Validação</span></p>
+
+							<div>
+								<ul>
+									<li>A validação da ontologia foi executada através da análise do modelo de ontologia criado. Esta análise visou perceber se a ontologia de fato atendia o domínio que se propôs a representar.
+									</li>
+								</ul> 
+							</div>
+								
+
+							<p><span>Verificação</span></p>
+
+							<div>
+
+								<ul>
+									<li>Para a verificação foram elaboradas as questões de competências que a ontologia deveria 	responder. Essas questões são perguntas que geralmente poderiam ser feitas para o modelo representado pela ontologia. Tais questões seriam futuramente convertidas para uma linguagem artificial. 
+									</li>
+
+									<ul>
+										<li>Quais foram as pessoas que desapareceram em uma cidade qualquer?</li>
+										<li>Quais foram as pessoas que desapareceram em um UF qualquer?</li>
+										<li>Quais foram as pessoas que desapareceram em um bairro qualquer?</li>
+										<li>Quais foram as pessoas que desapareceram dentro de um período de tempo?</li>
+										<li>Qual bairro que tem maior número de desaparecimentos de uma dada cidade?</li>
+										<li>Quais são pessoas que desapareceram dentro de uma faixa etária?</li>
+										<li>Qual cidade detém o maior número de desaparecimentos de adolescentes (12 até 18 anos)?</li>
+										<li>Quais são as pessoas que desapareceram há menos de 10 anos?</li>
+										<li>Quais pessoas de cor da pele negra que desapareceram?</li>
+										<li>Qual UF apresenta maior número de pessoas desaparecidas de cor da pele negra?</li>
+									</ul>
+								</ul>
+
+							</div>
+							
+							<div>
+								
+								<p>Algumas questões de competências convertidas para consultas SPARQL:</p>
+
+									<ul>
+										<li>Quais foram as pessoas que desapareceram em uma cidade qualquer?</li>
+											
+										<p>SELECT&nbsp; ?nome<br />WHERE <br />{ <br />&nbsp; &nbsp; &nbsp; &nbsp;?cidade&nbsp; ?a&nbsp; "Nova Igua&ccedil;u"^^xsd:string.<br />&nbsp; &nbsp; &nbsp; &nbsp;?bairro&nbsp; ?b&nbsp; ?cidade .<br />&nbsp; &nbsp; &nbsp; &nbsp;?local&nbsp; ?c&nbsp; ?bairro .<br />&nbsp; &nbsp; &nbsp; &nbsp;?desaparecimento&nbsp; ?d&nbsp; ?local .<br />&nbsp; &nbsp; &nbsp; &nbsp;?desaparecimento&nbsp; relembrar:estaAssociado&nbsp; ?pessoa.<br />&nbsp; &nbsp; &nbsp; &nbsp;?pessoa&nbsp; relembrar:nome&nbsp; ?nome<br />}</p>
+
+										<li>Quais são pessoas que desapareceram dentro de uma faixa etária?</li>
+								
+										<p>SELECT&nbsp; ?nomePessoa&nbsp; ?idade<br />WHERE <br />{ <br />&nbsp; &nbsp; bind (25&nbsp; as&nbsp; ?limiteInferior)<br />&nbsp; &nbsp; bind (35&nbsp; as&nbsp; ?limiteSuperior)<br />&nbsp; &nbsp; bind (year(now())&nbsp; as ?anoAtual) .<br />&nbsp; &nbsp; ?pessoa&nbsp; relembrar:dataNascimento&nbsp; ?dataNascimento .<br />&nbsp; &nbsp; ?pessoa&nbsp; relembrar:nome&nbsp; ?nomePessoa.<br />&nbsp; &nbsp; bind (?anoAtual - year(?dataNascimento)&nbsp; as&nbsp; ?idade) .<br />&nbsp; &nbsp; filter (?limiteInferior&nbsp; &lt;&nbsp; ?idade &amp;&amp;&nbsp; ?idade&nbsp; &lt;&nbsp; ?limiteSuperior)<br />}</p>
+
+										<li>Quais pessoas de cor da pele negra que desapareceram?</li>	
+
+										<p>SELECT&nbsp; ?nome<br />WHERE <br />{<br />&nbsp; &nbsp; ?pessoa&nbsp; relembrar:corPele&nbsp; "negra"^^xsd:string.<br />&nbsp; &nbsp; ?pessoa&nbsp; relembrar:nome&nbsp; ?nome<br />}</p>	
+
+									</ul>	
+							</div>
+
 						</div>
 
 					</div>
