@@ -1,5 +1,8 @@
 # OntologiaRelembrar
 
-Este repositório se destina ao projeto do site da ontologia Relembrar. O site foi desenvolvido com auxílio das tecnologias html5, css3 e Normalize CSS.
+Este repositório se destina ao projeto do site da ontologia Relembrar. 
 
-A estrátegia desenvolvimento adotada foi a Mobile First.
+A ontologia Relembrar foi criada para modelar o domínio de pessoas desaparecidas. Sua estrutura permite descrever características físicas, dados pessoais e dados referentes ao desaparecimento de uma pessoa. A ontologia Relembrar é uma das primeiras iniciativas de criação de um modelo ontológico para representar o contexto de pessoas desaparecidas. A criação da ontologia Relembrar foi motivada pelo desejo de disponibilizar um modelo de representação do conhecimento que permita estruturar as informações de pessoas desaparecidas de maneira a possibilitar que sistemas de busca inteligente possam ter compreensão sobre este domínio e extrair o seu conhecimento. Além disso, a disponibilização deste modelo também facilitará a publicação de dados abertos sobre pessoas desaparecidas. A Relembrar foi implementada com a OWL2 e sua sintaxe é a RDF/XML. Sua construção foi baseada seguindo os principios da metodologia Methontology para desenvolvimento de ontologias.
+
+A idea da criação de uma ontologia para pessoas desaparecidas surgiu através do conhecimento do Projeto Myosotis desenvolvido por Raul Sena. O Myosotis é um sistema que unifica dados de diferentes bases de dados sobre pessoas desaparecidas. Por meio de uma interface e API pública, o Myosotis permite aos usuários buscar e analisar dados de pessoas desaparecidas. Existem diversos sites que disponibilizam dados de pessoas desaparecidas. No entanto, a forma como estes dados se encontram organizados dificulta o reuso e compartilhamento entre sistemas inteligentes de busca. Nesse contexto, tem-se o próposito de amenizar essa dificuldade tornando público um modelo de representação do conhecimento do domínio sobre pessoas desaparecidas.
+
